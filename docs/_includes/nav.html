@@ -1,0 +1,7 @@
+<ul id="nav">
+    {% for item in site.nav %}
+    <li>
+        <a{% if item.name %} href="#{{ item.name | downcase }}"{% endif %}>{{ item.name }}</a>
+    </li>
+    {% endfor %}
+</ul>

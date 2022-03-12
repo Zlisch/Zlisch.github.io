@@ -1,0 +1,136 @@
+/* @group Defaults */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    text-decoration: none;
+    vertical-align: baseline;
+    background: transparent;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-primary: #27AF85;
+    --color-secondary: #090710;
+    --color-tertiary: #F4BE27;
+    --color-off-white: #FEFFF6;
+    --color-light-gray: #F8F8F8;
+    --font-family-body: "FranklinGothicLTPro-Bk",sans-serif;
+    --font-family-heading: "FranklinGothicStd-Condensed",sans-serif;
+    --font-size-base: 1.5rem;
+    --font-size-body: 0.875rem;
+    --font-size-subtitle: 1.75rem;
+    --font-size-large-text: 1.5rem;
+    --line-height-heading: 1.1;
+    --gutter: 0.625rem;
+    --block-spacing: 3.75rem;
+}
+
+/* @end */
+
+/* @group Utility Classes */
+
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.floatleft {
+    float: left;
+}
+.floatright {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+.hidden {
+    display: none;
+}
+
+.clearfix {
+    overflow: hidden;
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}
+
+.spinner {
+    display: none;
+    width: 16px;
+    height: 16px;
+}
+
+.placeholder {
+    color: #8a8a8a;
+}
+
+/* @end */
+
+/* @group Nav */
+
+#nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    z-index: 99;
+    top: 0px;
+    right: auto;
+    left: calc(var(--gutter) * 2);
+    font-size: 20px;
+}
+
+#nav li {
+    list-style: none;
+    float: right;
+}
+
+#nav a {
+    display: flex;
+    align-items: center;
+    padding-top: 0.3em;
+    padding-right: 1em;
+    padding-left: 1em;
+    text-transform: uppercase;
+    color: var(--color-off-white);
+    transition: color 0.2s ease 0s, background-color 0.2s ease 0s;
+    font-size: var(--font-size-base);
+    background-color: var(--color-secondary);
+}
+
+@media (max-width: 600px) {
+    #nav {
+        background-color: var(--color-secondary);
+        font-size: 0.5rem;
+        width: 100%;
+        height: calc(100vw / 15);
+        left: auto;
+    }
+
+    #nav li {
+        margin: auto;
+    }
+
+    #nav a {
+        font-size: calc(100vw / 25);
+    }
+}
+
+#nav a:hover {
+    color: var(--color-primary);
+}
+
+/* @end */

@@ -115,7 +115,7 @@ html {
     background-color: var(--color-secondary);
 }
 
-@media (min-width: 320px) and (max-width: 600px) {
+@media (max-width: 520px) {
     #nav {
         background-color: var(--color-secondary);
         width: 100%;

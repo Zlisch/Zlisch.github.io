@@ -37,6 +37,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     --block-spacing: 3.75rem;
 }
 
+html {
+    background-color: var(--color-secondary);
+}
+
 /* @end */
 
 /* @group Utility Classes */

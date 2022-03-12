@@ -118,9 +118,8 @@ html {
 @media (max-width: 600px) {
     #nav {
         background-color: var(--color-secondary);
-        font-size: 0.5rem;
         width: 100%;
-        height: calc(100vw / 15);
+        height: calc(100vw / 12);
         left: auto;
     }
 
@@ -129,7 +128,7 @@ html {
     }
 
     #nav a {
-        font-size: calc(100vw / 25);
+        font-size: calc(100vw / 22);
     }
 }
 

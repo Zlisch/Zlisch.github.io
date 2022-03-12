@@ -115,22 +115,22 @@ html {
     background-color: var(--color-secondary);
 }
 
-@media screen and (max-width: 520px) {
-    #nav {
-        background-color: var(--color-secondary);
-        width: 100%;
-        height: calc(100vw / 12);
-        left: auto;
-    }
+/*@media screen and (max-width: 520px) {*/
+/*    #nav {*/
+/*        background-color: var(--color-secondary);*/
+/*        width: 100%;*/
+/*        height: calc(100vw / 12);*/
+/*        left: auto;*/
+/*    }*/
 
-    #nav li {
-        margin: auto;
-    }
+/*    #nav li {*/
+/*        margin: auto;*/
+/*    }*/
 
-    #nav a {
-        font-size: calc(100vw / 22);
-    }
-}
+/*    #nav a {*/
+/*        font-size: calc(100vw / 22);*/
+/*    }*/
+/*}*/
 
 #nav a:hover {
     color: var(--color-primary);

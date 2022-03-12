@@ -11,6 +11,10 @@
     {% for css in site.css %}
     <link rel="stylesheet" href="{{ css }}" type="text/css" />
     {% endfor %}
+
+    {% if page.title == "HOME" %}
+      <script src="/lib/smooth-scroll.js"></script>
+    {% endif %}
 </head>
 <body>
 <div id="header">
@@ -38,19 +42,9 @@
 </div>
 
 <div id="footer">
-    <div id="about">
-        {% for phrase in site.footer %}
-        <div>
-            <h6>{{ phrase.verb }}</h6>
-            {{ phrase.action }}
-        </div>
-        {% endfor %}
-    </div>
-    <div id="copyright">
-        {% for line in site.copyright %}
-        <div>{{ line }}</div>
-        {% endfor %}
-    </div>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 </div>
 
 {% for js in site.js %}

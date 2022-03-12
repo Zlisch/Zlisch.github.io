@@ -38,7 +38,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 html {
-    background-color: var(--color-secondary);
+    /*background-color: var(--color-secondary);*/
 }
 
 /* @end */

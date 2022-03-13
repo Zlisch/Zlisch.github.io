@@ -1,7 +1,75 @@
-<ul id="nav">
+<ul id="nav" class="pc-nav">
     {% for item in site.nav %}
     <li>
         <a{% if item.name %} href="#{{ item.name | downcase }}"{% endif %}>{{ item.name }}</a>
     </li>
     {% endfor %}
 </ul>
+
+<div class="mobile-nav">
+    <button class="mobile-nav-button" onclick="menuRespond()" id="mobile-nav-button">
+        <svg width="16" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M0 0h16v2H0zM0 5h16v2H0zM0 10h16v2H0z"></path>
+        </svg>
+
+        <span class="mobile-nav-text">
+            MENU
+        </span>
+    </button>
+
+    <div class="mobile-dropdown-menu" style="pointer-events: none; opacity: 0;" id="mobile-nav-tabs">
+        {% for item in site.nav %}
+          <a{% if item.name %} href="#{{ item.name | downcase }}"{% endif %} style="opacity: 0; transform: translateY(10px) translateZ(0px);" class="mobile-dropdown-tab">{{ item.name }}</a>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    function menuRespond() {
+        // console.log(document.getElementById("mobile-nav-button").style.getPropertyValue("background-color"));
+        var stateStr = document.getElementById("mobile-nav-button").style.getPropertyValue("background-color");
+        if (stateStr === "" || stateStr === "var(--color-secondary)") {
+
+            document.getElementById("mobile-nav-button").style.setProperty("background-color", "var(--color-off-white)");
+            var childrenButton = document.getElementById("mobile-nav-button").children;
+            for (var i = 0; i < childrenButton.length; i++) {
+                childrenButton[i].style.setProperty("color", "var(--color-secondary)");
+            }
+
+            document.getElementById("mobile-nav-tabs").style.setProperty("opacity", "1");
+            document.getElementById("mobile-nav-tabs").style.setProperty("pointer-events", "auto");
+            var children = document.getElementById("mobile-nav-tabs").children;
+            for (var i = 0; i < children.length; i++) {
+                children[i].style.setProperty("transform", "translateY(0px)");
+                children[i].style.setProperty("opacity", "1");
+            }
+        } else {
+
+            document.getElementById("mobile-nav-button").style.setProperty("background-color", "var(--color-secondary)");
+            var childrenButton = document.getElementById("mobile-nav-button").children;
+            for (var i = 0; i < childrenButton.length; i++) {
+                childrenButton[i].style.setProperty("color", "var(--color-off-white)");
+            }
+
+            document.getElementById("mobile-nav-tabs").style.setProperty("opacity", "0");
+            document.getElementById("mobile-nav-tabs").style.setProperty("pointer-events", "none");
+            var children = document.getElementById("mobile-nav-tabs").children;
+            for (var i = 0; i < children.length; i++) {
+                children[i].style.setProperty("transform", "translateY(10px)");
+                children[i].style.setProperty("opacity", "0");
+            }
+        }
+    }
+
+    // const anchors = document.getElementById("mobile-nav-tabs").children;
+    // for (var i = 0; i < anchors.length; i++) {
+    //     anchors[i].addEventListener("click", () => {
+    //         console.log("HI");
+    //     });
+    // }
+    // for (var i = 0; i < anchors.length; i++) {
+    //     anchors[i].addEventListener("click", () => {
+    //         console.log("HI");
+    //     });
+    // }
+</script>

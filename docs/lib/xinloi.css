@@ -219,3 +219,21 @@ button {
 }
 
 /* @end */
+
+.mobile-img {
+    display:block;overflow:hidden;top:0;left:0;bottom:0;right:0;box-sizing:border-box;margin:0
+}
+
+@media (max-width: 600px) {
+    .mobile-img {
+        position:relative;
+        display:block;
+        overflow:visible;
+        top:0;
+        left:-120px;
+        bottom:0;
+        right:0;
+        box-sizing:border-box;
+        margin:0;
+    }
+}

@@ -9,11 +9,11 @@
 	</head>
 	<body>
 		<div style="padding-top:2.5vw !important; padding-bottom: 2.5vw !important;">
-			<div style="width: 100%; padding-right: 10%; padding-left: 10%; margin-left: auto; margin-right: auto; max-width: 60%;">
+			<div class="content-wrapper" style="">
 				<article>
 					<header>
 						<div style="display:flex;align-items: center;justify-content: center;flex-direction: column">
-							<img src="pfp2.jpg" alt="pfp" style="width: 120px; height: 120px;object-fit: cover;border-radius: 50%;display:block;margin-left: auto;margin-right: auto;filter: drop-shadow(0 0 0.2rem #c9c9c9);border: 5px solid #fff;">
+							<img class="pfp-img" src="pfp2.jpg" alt="pfp">
 							<h1 style="font-family: monospace; font-size: calc(12px + 2vw); font-weight: 500; line-height: 1.5; color: #888; text-align: center">Xin Lu</h1>
 						</div>
 					</header>
@@ -43,7 +43,7 @@
 					Email: <a href="mailto: u7165475@anu.edu.au">u7165475@anu.edu.au</a>
 				</p>
 				
-				<div style="font-size: calc(5px + 0.8vw);font-style: italic;color: #bdbdbd">
+				<div class="footer-date">
 					<div id="update-date"></div>
 					<script type="text/jsx" src="index.jsx"></script>
 				</div>
@@ -52,6 +52,5 @@
 			</div>
 		</div>
 	</body>
-<script>var siteWidth = 1280;var scale = screen.width /siteWidth;document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
-</script>
+	<link rel="stylesheet" href="main.css">
 </html>

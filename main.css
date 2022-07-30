@@ -1,0 +1,29 @@
+.pfp-img {
+    width: 120px; height: 120px;object-fit: cover;border-radius: 50%;display:block;margin-left: auto;margin-right: auto;filter: drop-shadow(0 0 0.2rem #c9c9c9);border: 5px solid #fff;
+}
+
+.content-wrapper {
+    width: 100%; padding-right: 10%; padding-left: 10%; margin-left: auto; margin-right: auto; max-width: 60%;
+}
+
+.footer-date {
+    font-size: calc(5px + 0.8vw);font-style: italic;color: #bdbdbd
+}
+
+@media only screen and (max-width: 600px) {
+    .pfp-img {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .content-wrapper {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        max-width: fit-content;
+    }
+
+    .footer-date {
+        font-size: 3.5vw;
+    }
+}

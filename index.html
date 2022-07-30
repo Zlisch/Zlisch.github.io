@@ -2,20 +2,23 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/javascript"src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+		<script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script><script type="application/javascript" src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<script type="application/javascript" src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"></script>
 		<title>Xin Lu @ ANU</title>
 	</head>
 	<body>
-		<div style="padding-top:4vw !important; padding-bottom: 4vw !important;">
-			<div style="width: 100%; padding-right: 10%; padding-left: 10%; margin-left: auto; margin-right: auto; max-width: 640px;">
+		<div style="padding-top:2.5vw !important; padding-bottom: 2.5vw !important;">
+			<div style="width: 100%; padding-right: 10%; padding-left: 10%; margin-left: auto; margin-right: auto; max-width: 60%;">
 				<article>
 					<header>
 						<div style="display:flex;align-items: center;justify-content: center;flex-direction: column">
 							<img src="pfp2.jpg" alt="pfp" style="width: 120px; height: 120px;object-fit: cover;border-radius: 50%;display:block;margin-left: auto;margin-right: auto;filter: drop-shadow(0 0 0.2rem #c9c9c9);border: 5px solid #fff;">
-							<h1 style="font-family: monospace; font-size: 3.6vw; font-weight: 500; line-height: 1.5; color: #888; text-align: center">Xin Lu</h1>
+							<h1 style="font-family: monospace; font-size: 2.8vw; font-weight: 500; line-height: 1.5; color: #888; text-align: center">Xin Lu</h1>
 						</div>
 					</header>
 					
-					<section style="font-family: monospace; font-size: 2.4vw; line-height: 1.5; color: #888; text-align: left">
+					<section style="font-family: monospace; font-size: 1.4vw; line-height: 1.5; color: #888; text-align: left; padding-left: 15%; padding-right: 9%;">
 						<p>I am doing a Bachelor of Advanced Computing (Honors) (Research & Development) at the Australian National University, Canberra, in the School of Computing.
 						</p>
 						<p>I am interested in computer architecture, algorithmic efficiency, and general AI.
@@ -39,11 +42,11 @@
 				<p>
 					Email: <a href="mailto: u7165475@anu.edu.au">u7165475@anu.edu.au</a>
 				</p>
-				<p style="font-size: 1.6vw;font-style: italic;color: #bdbdbd">
-					<span>Last updated:</span>
-					<span id="update-date">Sat Jul 30 2022 18:33:10 GMT+1000 AEST</span>
-				</p>
-<!--				<script>const d = new Date("2022-07-30 18:33:10");document.getElementById("update-date").innerHTML = d;</script>-->
+				
+				<div style="font-size: 1.2vw;font-style: italic;color: #bdbdbd">
+					<div id="update-date"></div>
+					<script type="text/jsx" src="index.jsx"></script>
+				</div>
 					</section>
 				</article>
 			</div>

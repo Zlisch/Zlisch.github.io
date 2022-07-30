@@ -10,6 +10,10 @@
     font-size: calc(5px + 0.8vw);font-style: italic;color: #bdbdbd
 }
 
+.container {
+    padding-top:2.5vw; padding-bottom: 2.5vw;
+}
+
 @media only screen and (max-width: 600px) {
     .pfp-img {
         width: 20vw;
@@ -25,5 +29,9 @@
 
     .footer-date {
         font-size: 3.5vw;
+    }
+
+    .container {
+        padding-top:18vw; padding-bottom: 20vw;
     }
 }
